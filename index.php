@@ -170,7 +170,7 @@
                 </div>
                 <div class="texto-entrada">
                     <a href="entrada.php">
-                        <h4>Guia para la decoracion de tu hogar</h4>
+                        <h4>Guia para la decoracion de tu hogar.</h4>
                         <p class="informacion-meta">Escrito el: <span>17/09/2022</span> por: <span>Me</span></p>
 
                         <p>Maximiza el espacio en tu hogar con esta guia, aprende a combinar muebles y colores para darle vida a tu espacio</p>
