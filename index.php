@@ -1,37 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienes Raices</title>
-    <link rel="stylesheet" href="build/css/app.css">
-</head>
-<body>
-    <header class="header inicio">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a href="/">
-                    <img src="build/img/logo.svg" class="logo-header" alt="Logotipo Web">
-                </a>
+<?php 
+    $inicio = true;
+    include 'includes/templates/header.php'; 
+    ?>
 
-                <div class="mobile-menu">
-                    <img src="build/img/barras.svg" alt="Icono menu responsive">
-                </div>
-
-                <div class="derecha">
-                    <img class="dark-mode-boton" src="build/img/dark-mode.svg" alt="icono dark mode">
-                    <nav class="navegacion">
-                        <a href="nosotros.html">Nosotros</a>
-                        <a href="anuncios.html">Anuncios</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="contacto.html">Contacto</a>
-                    </nav>
-                </div>
-            </div> <!-- .barra -->
-            <h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>
-        </div>
-    </header>
 
     <main class="contenedor seccion">
         <h1>Más Sobre Nosotros</h1>
@@ -86,7 +57,7 @@
                         </li>
                     </ul>
 
-                    <a href="anuncio.html" class="boton-amarillo-block">
+                    <a href="anuncio.php" class="boton-amarillo-block">
                         Ver Propiedad
                     </a>
                 </div><!-- Contenido-Anuncio -->
@@ -118,7 +89,7 @@
                         </li>
                     </ul>
 
-                    <a href="anuncio.html" class="boton-amarillo-block">
+                    <a href="anuncio.php" class="boton-amarillo-block">
                         Ver Propiedad
                     </a>
                 </div><!-- Contenido-Anuncio -->
@@ -150,7 +121,7 @@
                         </li>
                     </ul>
 
-                    <a href="anuncio.html" class="boton-amarillo-block">
+                    <a href="anuncio.php" class="boton-amarillo-block">
                         Ver Propiedad
                     </a>
                 </div><!-- Contenido-Anuncio -->
@@ -158,14 +129,14 @@
         </div><!-- CONTENEDOR-Anuncios -->
 
         <div class="ver-todas alinear-derecha">
-            <a href="anuncios.html" class="boton-verde">Ver todas</a>
+            <a href="anuncios.php" class="boton-verde">Ver todas</a>
         </div>
     </section>
 
     <section class="imagen-contacto">
         <h2>Encuentra la casa de tu sueños</h2>
         <p>Llena el formulario de contacto y un asesor se pondrá en contacto contigo a la brevedad</p>
-        <a href="contacto.html" class="boton-amarillo">Contactanos</a>
+        <a href="contacto.php" class="boton-amarillo">Contactanos</a>
     </section>
 
     <div class="contenedor seccion seccion-inferior">
@@ -181,7 +152,7 @@
                     </picture>
                 </div>
                 <div class="texto-entrada">
-                    <a href="entrada.html">
+                    <a href="entrada.php">
                         <h4>Terraza en el techo de tu casa</h4>
                         <p class="informacion-meta">Escrito el: <span>19/09/22</span> por: <span>Admin</span></p>
 
@@ -198,7 +169,7 @@
                     </picture>
                 </div>
                 <div class="texto-entrada">
-                    <a href="entrada.html">
+                    <a href="entrada.php">
                         <h4>Guia para la decoracion de tu hogar</h4>
                         <p class="informacion-meta">Escrito el: <span>17/09/2022</span> por: <span>Me</span></p>
 
@@ -222,10 +193,10 @@
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion mostrar">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="nosotros.php">Nosotros</a>
+                <a href="anuncios.php">Anuncios</a>
+                <a href="blog.php">Blog</a>
+                <a href="contacto.php">Contacto</a>
             </nav>
         </div>
 
