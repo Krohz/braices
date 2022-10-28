@@ -25,13 +25,13 @@
         // var_dump($_POST);
         // echo "</pre>"; 
         
-        $titulo = $_POST['titulo'];
-        $precio = $_POST['precio'];
-        $descripcion = $_POST['descripcion'];
-        $habitaciones = $_POST['habitaciones'];
-        $wc = $_POST['wc'];
-        $estacionamientos = $_POST['estacionamientos'];
-        $vendedorId = $_POST['vendedor'];
+        $titulo = mysqli_real_escape_string($db, $_POST['titulo']);
+        $precio = mysqli_real_escape_string($db, $_POST['precio']);
+        $descripcion = mysqli_real_escape_string($db, $_POST['descripcion']);
+        $habitaciones = mysqli_real_escape_string($db, $_POST['habitaciones']);
+        $wc = mysqli_real_escape_string($db, $_POST['wc']);
+        $estacionamientos = mysqli_real_escape_string($db, $_POST['estacionamientos']);
+        $vendedorId = mysqli_real_escape_string($db, $_POST['vendedor']);
         $creado = date('Y/m/d');
 
         if (!$titulo) {
