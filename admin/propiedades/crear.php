@@ -70,8 +70,8 @@
             $errores[] = "La imagen es obligatoria";
         }
 
-        //Validar por tamaño 100kb max
-        $medida = 1000 * 100;
+        //Validar por tamaño 1mb max
+        $medida = 1000 * 1000;
 
         if($imagen['size'] > $medida){
             $errores[] = 'La imagen es muy pesada';
@@ -93,6 +93,10 @@
                 mkdir($carpetaImagenes);
             }
             
+
+            //Subir la imagen a la carpeta
+            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . "/archivo.jpg");
+            exit;
 
             //Insertar en la Base de datos - como normalmente en MySql
             $query = "INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc, estacionamientos, creado, vendedores_id) VALUES ('$titulo', '$precio', '$descripcion', '$habitaciones', '$wc', '$estacionamientos', '$creado', '$vendedorId' )";
