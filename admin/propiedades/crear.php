@@ -109,7 +109,7 @@
             $resultado = mysqli_query($db, $query);
             if($resultado){
                 //Redireccionar al usuario una vez que todo este bien
-                header('Location:/admin');
+                header('Location:/admin?resultado=1');
             }
         }
 
