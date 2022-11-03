@@ -84,6 +84,16 @@
         
         //Revisar que el arreglo de errores este vacio
         if (empty($errores)) {
+            // Subida de archivos
+
+            //Crear una carpeta
+            $carpetaImagenes = '../../imagenes';
+
+            if (!is_dir($carpetaImagenes)) {
+                mkdir($carpetaImagenes);
+            }
+            
+
             //Insertar en la Base de datos - como normalmente en MySql
             $query = "INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc, estacionamientos, creado, vendedores_id) VALUES ('$titulo', '$precio', '$descripcion', '$habitaciones', '$wc', '$estacionamientos', '$creado', '$vendedorId' )";
 
