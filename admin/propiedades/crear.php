@@ -92,14 +92,17 @@
             if (!is_dir($carpetaImagenes)) {
                 mkdir($carpetaImagenes);
             }
+
+            //Generar un nombre unico para la imagen
+            $nombreImagen = md5( uniqid( rand(), true ) ) . ".jpg";
             
 
             //Subir la imagen a la carpeta
-            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . "/archivo.jpg");
-            exit;
+            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . "/" .$nombreImagen );
+
 
             //Insertar en la Base de datos - como normalmente en MySql
-            $query = "INSERT INTO propiedades (titulo, precio, descripcion, habitaciones, wc, estacionamientos, creado, vendedores_id) VALUES ('$titulo', '$precio', '$descripcion', '$habitaciones', '$wc', '$estacionamientos', '$creado', '$vendedorId' )";
+            $query = "INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamientos, creado, vendedores_id) VALUES ('$titulo', '$precio', '$nombreImagen', '$descripcion', '$habitaciones', '$wc', '$estacionamientos', '$creado', '$vendedorId' )";
 
             //echo $query;
 
