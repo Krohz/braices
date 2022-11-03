@@ -99,25 +99,32 @@
         
         //Revisar que el arreglo de errores este vacio
         if (empty($errores)) {
+            //Crear una carpeta
+            $carpetaImagenes = '../../imagenes';
+
+            if (!is_dir($carpetaImagenes)) {
+                mkdir($carpetaImagenes);
+            }
+
+            $nombreImagen = '';
+            
             // Subida de archivos
 
-            //Crear una carpeta
-            // $carpetaImagenes = '../../imagenes';
-
-            // if (!is_dir($carpetaImagenes)) {
-            //     mkdir($carpetaImagenes);
-            // }
-
-            // //Generar un nombre unico para la imagen
-            // $nombreImagen = md5( uniqid( rand(), true ) ) . ".jpg";
+            if ($imagen['name']) {
+                //Eliminar la imagen previa
+                unlink($carpetaImagenes . "/" . $propiedad['imagen']);
+                //Generar un nombre unico para la imagen
+                $nombreImagen = md5( uniqid( rand(), true ) ) . ".jpg";
+                
+                //Subir la imagen a la carpeta
+                move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . "/" .$nombreImagen );
+            }else{
+                $nombreImagen = $propiedad['imagen'];
+            }
             
 
-            // //Subir la imagen a la carpeta
-            // move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . "/" .$nombreImagen );
-
-
             //Insertar en la Base de datos - como normalmente en MySql
-            $query = "UPDATE propiedades SET titulo='${titulo}', precio='${precio}', descripcion='${descripcion}', habitaciones=${habitaciones}, wc=${wc}, estacionamientos=${estacionamientos}, vendedores_id=${vendedorId} WHERE id = ${id}";
+            $query = "UPDATE propiedades SET titulo='${titulo}', precio='${precio}', imagen= '${nombreImagen}', descripcion='${descripcion}', habitaciones=${habitaciones}, wc=${wc}, estacionamientos=${estacionamientos}, vendedores_id=${vendedorId} WHERE id = ${id}";
 
             //echo $query;
 
