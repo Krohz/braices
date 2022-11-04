@@ -6,3 +6,5 @@ src
 *package.json
 info.php
 imagenes
+usuario.php
+login.php
