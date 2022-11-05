@@ -6,7 +6,7 @@
 - SASS
 - PHP
 - Gulp
-- MySql 
+- MySql Database
 
 ## Author
 Twitter - [@AcsKros](https://twitter.com/AcsKros)
